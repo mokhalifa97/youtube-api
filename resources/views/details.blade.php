@@ -9,23 +9,29 @@
 </head>
 <body>
     <div class="d-flex flex-column align-items-center justify-content-center" style="padding: 70px">
-        <h1 class="text-danger">video details</h1>
-        <a href="{{route('home')}}" class="btn btn-primary">Home</a>
+        <h1 class="text-danger">Video Details</h1>
+        <a href="{{route('home')}}" class="btn btn-success">Back Home</a>
+
+
 
         <div class="mt-5">
-            <h2 class="text-success ">Video Title:</h2> 
+            <h2 class="text-success ">The Video:</h2> 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $id ?>?si=ZnNvPgOJ8orA19xx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <h2 class="text-success pt-5">Video Title:</h2> 
                 <h2><?php echo $video->title ?></h2>
 
 
             <h2 class="text-success pt-5">Video Thumbnail:</h2>
             <img 
                 src='<?php echo $video->thumbnails->high->url ?>' 
-                style='width:150px' 
+                class="mt-2"
+                style="width: 300px" 
                 alt='Thumbnail for the video <?php echo $video->title ?>'>
 
             <h2 class="text-success pt-5">Video Description:</h2>
             <textarea style='width:700px; height:200px'><?php echo $video->description ?></textarea>
-    </div>
+        </div>
 
 
 

@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('/details',[DetailController::class,'index'])->name('details');
+Route::post('/save',[HomeController::class,'save'])->name('save');
+
+Route::post('/details',[DetailController::class,'save'])->name('details.save');
