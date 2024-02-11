@@ -15,8 +15,7 @@
                             </div>
                                     <div class="w-100">
                                         <p class="social-media d-flex justify-content-end">
-                                            <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-                                            <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                            <a href="/auth/google" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-google"></span></a>
                                         </p>
                                     </div>
                         </div>
@@ -36,6 +35,10 @@
                         <input id="password-field" type="password" class="form-control" name="password" required>
                         <label class="form-control-placeholder" for="password">Password</label>
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <a type="button" href="/auth/google" class="form-control btn btn-primary rounded px-3"><span class="fa fa-google"></span> With Google</a>
                         </div>
 
                         <div class="form-group">
