@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[AuthController::class,'login'])->name('login');
+Route::post('/login',[AuthController::class,'loginUser'])->name('login.user');
+
+Route::get('/signup',[AuthController::class,'signup'])->name('signup');
+Route::post('/registration',[AuthController::class,'registration'])->name('registration');
+
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('/home',[HomeController::class,'index'])->name('home');
-Route::post('/save',[HomeController::class,'save'])->name('save');
-
 Route::post('/details',[DetailController::class,'save'])->name('details.save');

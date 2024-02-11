@@ -10,6 +10,8 @@
 <body>
     <div class="d-flex flex-column align-items-center justify-content-center" style="padding: 70px">
         <h1 class="text-danger">YOTUBE VIDEO &#128512</h1>
+        
+        <a class="btn btn-danger" href="{{route('logout')}}">logout</a>
 
         <form enctype="multipart/form-data" action="{{route('details.save')}}" method="POST" class="mt-5">
             @csrf
